@@ -1,0 +1,29 @@
+name:               anticaptcha-yesod-form
+version:            1.0.0
+cabal-version:      >= 1.16
+license:            OtherLicense
+license-file:       License.md
+category:           Web, Yesod
+author:             Robbie Bykowski
+homepage:           https://github.com/NebulaFox/anticaptcha-yesod-form
+stability:          stable
+synopsis:           Extends yesod-form for anticaptcha
+
+build-type:         Simple
+
+library
+    default-language: Haskell2010
+    
+    exposed-modules: Yesod.Form.AntiCaptcha
+                     Yesod.Form.Fields.Honeypot
+    
+    other-extensions: OverloadedStrings
+                      FlexibleContexts
+                      TypeFamilies
+    
+    build-depends: base        >= 4 && < 5
+                 , yesod-core  >= 1.2
+                 , yesod-form  >= 1.3
+                 , anticaptcha >= 1.0 && < 2
+                 , text
+                 , transformers
